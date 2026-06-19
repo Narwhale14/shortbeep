@@ -12,6 +12,7 @@
     "type-check": "vue-tsc --build"
   },
   "dependencies": {
+    "primeicons": "^7.0.0",
     "vue": "^3.5.38"
   },
   "devDependencies": {
