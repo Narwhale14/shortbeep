@@ -39,6 +39,7 @@ async function copy() {
       <!-- output and copy button -->
       <div class="input-wrapper">
         <input class="link-input" :value="shortlink" placeholder="Your shortened link" readonly/>
+        <button v-if="shortlink" class="clear-button pi pi-times" @click="shortlink = ''"></button>
         <button class="button pi pi-clone" @click="copy"></button>
       </div>
     </div>
