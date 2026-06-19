@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . 'app/LinkController.php';
+require_once __DIR__ . '/app/LinkController.php';
 
 $db = new PDO('sqlite:' . __DIR__ . '/links.db');
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -15,7 +15,7 @@ if($method === 'POST' && $path === '/shorten') {
     $url = $input['url'];
 
     if(!isset($input['url']) || $input['url'] === '') {
-        http_response_code(404);
+        http_response_code(400);
         echo json_encode(['error' => 'Missing url']);
         exit;
     }
