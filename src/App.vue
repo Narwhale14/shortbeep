@@ -28,6 +28,7 @@ async function copy() {
 
 <template>
   <div class="main-page">
+    <h1 class="title-text">shortbeep</h1>
     <div class="controls-wrapper">
       <!-- input and shorten button -->
       <div class="input-wrapper">
@@ -52,11 +53,20 @@ async function copy() {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
   
   width: 100vw;
   height: 100vh;
+  box-sizing: border-box;
+  padding-bottom: 8rem;
 
   overflow: hidden;
+}
+
+.title-text {
+  font-size: 5rem;
+  color: cornflowerblue;
+  user-select: none;
 }
 
 .link-input {
